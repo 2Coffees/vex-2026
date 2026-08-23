@@ -16,3 +16,12 @@ void odom_pure_pursuit_wait_until_example();
 void odom_boomerang_example();
 void odom_boomerang_injected_pure_pursuit_example();
 void measure_offsets();
+
+// Custom
+
+void SoloAWP();
+void SeeCup();
+void GrabCup();
+void FlipCup();
+void DumpCup(); 
+
