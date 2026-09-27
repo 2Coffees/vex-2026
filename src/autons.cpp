@@ -49,6 +49,25 @@ void default_constants() {
 }
 
 ///
+// Basic Auton: forward 24 inches, turn right, then forward 12 inches.
+///
+void basic_auton() {
+  // Speeds are out of 127. Adjust these and the distances for your robot.
+  const int drive_speed = 80;
+  const int turn_speed = 60;
+
+  chassis.pid_drive_set(24_in, drive_speed, true);
+  chassis.pid_wait();
+
+  // Turns target an absolute heading; autonomous() resets the starting heading to 0.
+  chassis.pid_turn_set(90_deg, turn_speed);
+  chassis.pid_wait();
+
+  chassis.pid_drive_set(12_in, drive_speed, true);
+  chassis.pid_wait();
+}
+
+///
 // Drive Example
 ///
 void drive_example() {
